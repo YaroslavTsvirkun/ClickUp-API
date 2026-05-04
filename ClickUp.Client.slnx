@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ClickUp.Client/ClickUp.Client.csproj" />
+  <Project Path="ClickUp.Client.Tests/ClickUp.Client.Tests.csproj" />
+</Solution>

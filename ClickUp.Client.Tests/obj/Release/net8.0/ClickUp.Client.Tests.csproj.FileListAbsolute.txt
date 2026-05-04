@@ -1,0 +1,525 @@
+C:\Users\Yaros\OneDrive\Документы - мои\New project\tests\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.exe
+C:\Users\Yaros\OneDrive\Документы - мои\New project\tests\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.deps.json
+C:\Users\Yaros\OneDrive\Документы - мои\New project\tests\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.runtimeconfig.json
+C:\Users\Yaros\OneDrive\Документы - мои\New project\tests\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.dll
+C:\Users\Yaros\OneDrive\Документы - мои\New project\tests\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.pdb
+C:\Users\Yaros\OneDrive\Документы - мои\New project\tests\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.dll
+C:\Users\Yaros\OneDrive\Документы - мои\New project\tests\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.pdb
+C:\Users\Yaros\OneDrive\Документы - мои\New project\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.csproj.AssemblyReference.cache
+C:\Users\Yaros\OneDrive\Документы - мои\New project\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yaros\OneDrive\Документы - мои\New project\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.AssemblyInfoInputs.cache
+C:\Users\Yaros\OneDrive\Документы - мои\New project\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.AssemblyInfo.cs
+C:\Users\Yaros\OneDrive\Документы - мои\New project\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Yaros\OneDrive\Документы - мои\New project\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp..3FFA5F44.Up2Date
+C:\Users\Yaros\OneDrive\Документы - мои\New project\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.dll
+C:\Users\Yaros\OneDrive\Документы - мои\New project\tests\ClickUp.Client.Tests\obj\Release\net8.0\refint\ClickUp.Client.Tests.dll
+C:\Users\Yaros\OneDrive\Документы - мои\New project\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.pdb
+C:\Users\Yaros\OneDrive\Документы - мои\New project\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.genruntimeconfig.cache
+C:\Users\Yaros\OneDrive\Документы - мои\New project\tests\ClickUp.Client.Tests\obj\Release\net8.0\ref\ClickUp.Client.Tests.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.exe
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.deps.json
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.runtimeconfig.json
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.pdb
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.pdb
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.csproj.AssemblyReference.cache
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.AssemblyInfoInputs.cache
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.AssemblyInfo.cs
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.csproj.CoreCompileInputs.cache
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp..3FFA5F44.Up2Date
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\obj\Release\net8.0\refint\ClickUp.Client.Tests.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.pdb
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.genruntimeconfig.cache
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\obj\Release\net8.0\ref\ClickUp.Client.Tests.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Configuration.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Diagnostics.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Http.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Logging.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Options.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Primitives.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Refit.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Refit.HttpClientFactory.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\System.Diagnostics.DiagnosticSource.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\.msCoverageSourceRootsMapping_ClickUp.Client.Tests
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\testhost.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\testhost.exe
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\xunit.abstractions.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\xunit.runner.visualstudio.testadapter.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.ApplicationInsights.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Testing.Extensions.Telemetry.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Testing.Extensions.TrxReport.Abstractions.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Testing.Platform.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Testing.Extensions.MSBuild.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.TestPlatform.CoreUtilities.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.TestPlatform.PlatformAbstractions.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.TestPlatform.CommunicationUtilities.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.TestPlatform.CrossPlatEngine.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.TestPlatform.Utilities.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.VisualStudio.TestPlatform.Common.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\Newtonsoft.Json.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\xunit.v3.assert.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\xunit.v3.common.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\xunit.v3.mtp-v1.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\xunit.v3.core.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\xunit.v3.runner.common.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\xunit.v3.runner.inproc.console.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.gentestingplatformentrypointinputcache.cache
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.genautoregisteredextensionsinputcache.cache
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\obj\Release\net8.0\SelfRegisteredExtensions.cs
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.xUnit.v3.EntryPoint.cache
+D:\Code\ClickUp.Client\tests\ClickUp.Client.Tests\obj\Release\net8.0\XunitAutoGeneratedEntryPoint.cs
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\.msCoverageSourceRootsMapping_ClickUp.Client.Tests
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\testhost.exe
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\testhost.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\xunit.abstractions.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\xunit.runner.visualstudio.testadapter.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.exe
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.deps.json
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.runtimeconfig.json
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.pdb
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.ApplicationInsights.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Configuration.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Diagnostics.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Http.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Logging.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Options.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Primitives.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Testing.Extensions.Telemetry.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Testing.Extensions.TrxReport.Abstractions.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Testing.Platform.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Testing.Extensions.MSBuild.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.TestPlatform.CoreUtilities.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.TestPlatform.PlatformAbstractions.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.TestPlatform.CommunicationUtilities.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.TestPlatform.CrossPlatEngine.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.TestPlatform.Utilities.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.VisualStudio.TestPlatform.Common.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Newtonsoft.Json.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Refit.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\Refit.HttpClientFactory.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\System.Diagnostics.DiagnosticSource.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\xunit.v3.assert.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\xunit.v3.common.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\xunit.v3.mtp-v1.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\xunit.v3.core.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\xunit.v3.runner.common.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\xunit.v3.runner.inproc.console.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.pdb
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.csproj.AssemblyReference.cache
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.gentestingplatformentrypointinputcache.cache
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.genautoregisteredextensionsinputcache.cache
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\obj\Release\net8.0\SelfRegisteredExtensions.cs
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.xUnit.v3.EntryPoint.cache
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\obj\Release\net8.0\XunitAutoGeneratedEntryPoint.cs
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.AssemblyInfoInputs.cache
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.AssemblyInfo.cs
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.csproj.CoreCompileInputs.cache
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp..3FFA5F44.Up2Date
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\obj\Release\net8.0\refint\ClickUp.Client.Tests.dll
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.pdb
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.genruntimeconfig.cache
+D:\Code\ClickUp.Client\ClickUp.Client.Tests\obj\Release\net8.0\ref\ClickUp.Client.Tests.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\.msCoverageSourceRootsMapping_ClickUp.Client.Tests
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\testhost.exe
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\testhost.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\xunit.abstractions.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\xunit.runner.visualstudio.testadapter.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.exe
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.deps.json
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.runtimeconfig.json
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.Tests.pdb
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.ApplicationInsights.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Configuration.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Diagnostics.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Http.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Logging.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Options.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Extensions.Primitives.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Testing.Extensions.Telemetry.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Testing.Extensions.TrxReport.Abstractions.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Testing.Platform.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.Testing.Extensions.MSBuild.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.TestPlatform.CoreUtilities.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.TestPlatform.PlatformAbstractions.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.TestPlatform.CommunicationUtilities.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.TestPlatform.CrossPlatEngine.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.TestPlatform.Utilities.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Microsoft.VisualStudio.TestPlatform.Common.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Newtonsoft.Json.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Refit.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\Refit.HttpClientFactory.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\System.Diagnostics.DiagnosticSource.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\xunit.v3.assert.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\xunit.v3.common.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\xunit.v3.mtp-v1.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\xunit.v3.core.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\xunit.v3.runner.common.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\xunit.v3.runner.inproc.console.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.Testing.Extensions.Telemetry.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.Testing.Platform.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.Testing.Extensions.MSBuild.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\bin\Release\net8.0\ClickUp.Client.pdb
+D:\Code\ClickUp API\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.csproj.AssemblyReference.cache
+D:\Code\ClickUp API\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\ClickUp API\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.gentestingplatformentrypointinputcache.cache
+D:\Code\ClickUp API\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.genautoregisteredextensionsinputcache.cache
+D:\Code\ClickUp API\ClickUp.Client.Tests\obj\Release\net8.0\SelfRegisteredExtensions.cs
+D:\Code\ClickUp API\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.xUnit.v3.EntryPoint.cache
+D:\Code\ClickUp API\ClickUp.Client.Tests\obj\Release\net8.0\XunitAutoGeneratedEntryPoint.cs
+D:\Code\ClickUp API\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.AssemblyInfoInputs.cache
+D:\Code\ClickUp API\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.AssemblyInfo.cs
+D:\Code\ClickUp API\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.csproj.CoreCompileInputs.cache
+D:\Code\ClickUp API\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp..3FFA5F44.Up2Date
+D:\Code\ClickUp API\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\obj\Release\net8.0\refint\ClickUp.Client.Tests.dll
+D:\Code\ClickUp API\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.pdb
+D:\Code\ClickUp API\ClickUp.Client.Tests\obj\Release\net8.0\ClickUp.Client.Tests.genruntimeconfig.cache
+D:\Code\ClickUp API\ClickUp.Client.Tests\obj\Release\net8.0\ref\ClickUp.Client.Tests.dll
