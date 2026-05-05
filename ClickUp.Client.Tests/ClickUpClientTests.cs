@@ -135,6 +135,174 @@ public sealed class ClickUpClientTests
     }
 
     [Fact]
+    public async Task SupportsSpaceCrudEndpoints()
+    {
+        var responses = new Queue<HttpResponseMessage>(new[]
+        {
+            TestHttp.JsonResponse("""{"id":"space_1"}"""),
+            TestHttp.JsonResponse("""{"id":"space_2"}"""),
+            TestHttp.JsonResponse("""{"id":"space_2"}"""),
+            TestHttp.JsonResponse("""{}"""),
+        });
+        using var handler = new RecordingHandler(_ => responses.Dequeue());
+        using var client = TestClient.Create(handler);
+
+        await client.Spaces.GetSpaceJsonAsync("space 1", TestContext.Current.CancellationToken);
+        await client.Spaces.CreateSpaceJsonAsync(
+            "team_1",
+            """{"name":"Engineering","multiple_assignees":true}""",
+            TestContext.Current.CancellationToken);
+        await client.Spaces.UpdateSpaceJsonAsync(
+            "space_2",
+            """{"name":"Platform"}""",
+            TestContext.Current.CancellationToken);
+        await client.Spaces.DeleteSpaceJsonAsync("space_3", TestContext.Current.CancellationToken);
+
+        Assert.Equal(4, handler.Requests.Count);
+        Assert.Equal("https://api.clickup.com/api/v2/space/space%201", handler.Requests[0].Uri.AbsoluteUri);
+        Assert.Equal("GET", handler.Requests[0].Method);
+        Assert.Equal("https://api.clickup.com/api/v2/team/team_1/space", handler.Requests[1].Uri.AbsoluteUri);
+        Assert.Equal("POST", handler.Requests[1].Method);
+        Assert.Equal("""{"name":"Engineering","multiple_assignees":true}""", handler.Requests[1].Body);
+        Assert.Equal("https://api.clickup.com/api/v2/space/space_2", handler.Requests[2].Uri.AbsoluteUri);
+        Assert.Equal("PUT", handler.Requests[2].Method);
+        Assert.Equal("""{"name":"Platform"}""", handler.Requests[2].Body);
+        Assert.Equal("https://api.clickup.com/api/v2/space/space_3", handler.Requests[3].Uri.AbsoluteUri);
+        Assert.Equal("DELETE", handler.Requests[3].Method);
+    }
+
+    [Fact]
+    public async Task SupportsFolderCrudEndpoints()
+    {
+        var responses = new Queue<HttpResponseMessage>(new[]
+        {
+            TestHttp.JsonResponse("""{"id":"folder_1"}"""),
+            TestHttp.JsonResponse("""{"id":"folder_2"}"""),
+            TestHttp.JsonResponse("""{"id":"folder_2"}"""),
+            TestHttp.JsonResponse("""{}"""),
+        });
+        using var handler = new RecordingHandler(_ => responses.Dequeue());
+        using var client = TestClient.Create(handler);
+
+        await client.Folders.GetFolderJsonAsync("folder 1", TestContext.Current.CancellationToken);
+        await client.Folders.CreateFolderJsonAsync(
+            "space_1",
+            """{"name":"Backend"}""",
+            TestContext.Current.CancellationToken);
+        await client.Folders.UpdateFolderJsonAsync(
+            "folder_2",
+            """{"name":"Platform"}""",
+            TestContext.Current.CancellationToken);
+        await client.Folders.DeleteFolderJsonAsync("folder_3", TestContext.Current.CancellationToken);
+
+        Assert.Equal(4, handler.Requests.Count);
+        Assert.Equal("https://api.clickup.com/api/v2/folder/folder%201", handler.Requests[0].Uri.AbsoluteUri);
+        Assert.Equal("GET", handler.Requests[0].Method);
+        Assert.Equal("https://api.clickup.com/api/v2/space/space_1/folder", handler.Requests[1].Uri.AbsoluteUri);
+        Assert.Equal("POST", handler.Requests[1].Method);
+        Assert.Equal("""{"name":"Backend"}""", handler.Requests[1].Body);
+        Assert.Equal("https://api.clickup.com/api/v2/folder/folder_2", handler.Requests[2].Uri.AbsoluteUri);
+        Assert.Equal("PUT", handler.Requests[2].Method);
+        Assert.Equal("""{"name":"Platform"}""", handler.Requests[2].Body);
+        Assert.Equal("https://api.clickup.com/api/v2/folder/folder_3", handler.Requests[3].Uri.AbsoluteUri);
+        Assert.Equal("DELETE", handler.Requests[3].Method);
+    }
+
+    [Fact]
+    public async Task SupportsListCrudAndTaskMembershipEndpoints()
+    {
+        var responses = new Queue<HttpResponseMessage>(new[]
+        {
+            TestHttp.JsonResponse("""{"id":"list_1"}"""),
+            TestHttp.JsonResponse("""{"id":"list_2"}"""),
+            TestHttp.JsonResponse("""{"id":"list_3"}"""),
+            TestHttp.JsonResponse("""{"id":"list_3"}"""),
+            TestHttp.JsonResponse("""{}"""),
+            TestHttp.JsonResponse("""{}"""),
+            TestHttp.JsonResponse("""{}"""),
+        });
+        using var handler = new RecordingHandler(_ => responses.Dequeue());
+        using var client = TestClient.Create(handler);
+
+        await client.Lists.GetListJsonAsync("list 1", TestContext.Current.CancellationToken);
+        await client.Lists.CreateListJsonAsync(
+            "folder_1",
+            """{"name":"Sprint"}""",
+            TestContext.Current.CancellationToken);
+        await client.Lists.CreateFolderlessListJsonAsync(
+            "space_1",
+            """{"name":"Inbox"}""",
+            TestContext.Current.CancellationToken);
+        await client.Lists.UpdateListJsonAsync(
+            "list_3",
+            """{"name":"Backlog"}""",
+            TestContext.Current.CancellationToken);
+        await client.Lists.DeleteListJsonAsync("list_4", TestContext.Current.CancellationToken);
+        await client.Lists.AddTaskToListJsonAsync("list_5", "task_1", TestContext.Current.CancellationToken);
+        await client.Lists.RemoveTaskFromListJsonAsync("list_5", "task_1", TestContext.Current.CancellationToken);
+
+        Assert.Equal(7, handler.Requests.Count);
+        Assert.Equal("https://api.clickup.com/api/v2/list/list%201", handler.Requests[0].Uri.AbsoluteUri);
+        Assert.Equal("GET", handler.Requests[0].Method);
+        Assert.Equal("https://api.clickup.com/api/v2/folder/folder_1/list", handler.Requests[1].Uri.AbsoluteUri);
+        Assert.Equal("POST", handler.Requests[1].Method);
+        Assert.Equal("""{"name":"Sprint"}""", handler.Requests[1].Body);
+        Assert.Equal("https://api.clickup.com/api/v2/space/space_1/list", handler.Requests[2].Uri.AbsoluteUri);
+        Assert.Equal("POST", handler.Requests[2].Method);
+        Assert.Equal("""{"name":"Inbox"}""", handler.Requests[2].Body);
+        Assert.Equal("https://api.clickup.com/api/v2/list/list_3", handler.Requests[3].Uri.AbsoluteUri);
+        Assert.Equal("PUT", handler.Requests[3].Method);
+        Assert.Equal("""{"name":"Backlog"}""", handler.Requests[3].Body);
+        Assert.Equal("https://api.clickup.com/api/v2/list/list_4", handler.Requests[4].Uri.AbsoluteUri);
+        Assert.Equal("DELETE", handler.Requests[4].Method);
+        Assert.Equal("https://api.clickup.com/api/v2/list/list_5/task/task_1", handler.Requests[5].Uri.AbsoluteUri);
+        Assert.Equal("POST", handler.Requests[5].Method);
+        Assert.Equal("https://api.clickup.com/api/v2/list/list_5/task/task_1", handler.Requests[6].Uri.AbsoluteUri);
+        Assert.Equal("DELETE", handler.Requests[6].Method);
+    }
+
+    [Fact]
+    public async Task SupportsTaskMergeAndTimeInStatusEndpoints()
+    {
+        var responses = new Queue<HttpResponseMessage>(new[]
+        {
+            TestHttp.JsonResponse("""{"id":"task_1"}"""),
+            TestHttp.JsonResponse("""{"current_status":{"status":"in progress"}}"""),
+            TestHttp.JsonResponse("""{"tasks":[{"task_id":"task_1"},{"task_id":"task_2"}]}"""),
+        });
+        using var handler = new RecordingHandler(_ => responses.Dequeue());
+        using var client = TestClient.Create(handler);
+
+        await client.Tasks.MergeTasksJsonAsync(
+            "task_1",
+            ["task_2", "task_3"],
+            TestContext.Current.CancellationToken);
+        await client.Tasks.GetTaskTimeInStatusJsonAsync(
+            "task 1",
+            customTaskIds: true,
+            teamId: "321",
+            cancellationToken: TestContext.Current.CancellationToken);
+        await client.Tasks.GetBulkTaskTimeInStatusJsonAsync(
+            ["task_1", "task_2"],
+            customTaskIds: true,
+            teamId: "321",
+            cancellationToken: TestContext.Current.CancellationToken);
+
+        Assert.Equal(3, handler.Requests.Count);
+        Assert.Equal("https://api.clickup.com/api/v2/task/task_1/merge", handler.Requests[0].Uri.AbsoluteUri);
+        Assert.Equal("POST", handler.Requests[0].Method);
+        Assert.Equal("""{"source_task_ids":["task_2","task_3"]}""", handler.Requests[0].Body);
+        Assert.Equal(
+            "https://api.clickup.com/api/v2/task/task%201/time_in_status?custom_task_ids=true&team_id=321",
+            handler.Requests[1].Uri.AbsoluteUri);
+        Assert.Equal("GET", handler.Requests[1].Method);
+        Assert.Equal(
+            "https://api.clickup.com/api/v2/task/bulk_time_in_status/task_ids?task_ids=task_1%2Ctask_2&custom_task_ids=true&team_id=321",
+            handler.Requests[2].Uri.AbsoluteUri);
+        Assert.Equal("GET", handler.Requests[2].Method);
+    }
+
+    [Fact]
     public async Task ExchangesOAuthCodeWithoutAuthorizationHeader()
     {
         using var handler = new RecordingHandler(_ =>

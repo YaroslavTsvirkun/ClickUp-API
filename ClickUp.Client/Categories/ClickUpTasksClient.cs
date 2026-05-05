@@ -1,5 +1,6 @@
 using System.Text.Json;
 using ClickUp.Client.Abstractions.Tasks;
+using ClickUp.Client.Infrastructure;
 using ClickUp.Client.Models;
 
 namespace ClickUp.Client.Categories;
@@ -244,6 +245,86 @@ public sealed class ClickUpTasksClient : ClickUpEndpointClient
             cancellationToken);
     }
 
+    public string MergeTasksJson(string taskId, string[] sourceTaskIds)
+    {
+        return MergeTasksJsonAsync(taskId, sourceTaskIds).GetAwaiter().GetResult();
+    }
+
+    public Task<string> MergeTasksJsonAsync(
+        string taskId,
+        string[] sourceTaskIds,
+        CancellationToken cancellationToken = default)
+    {
+        ArgumentGuard.ThrowIfNull(sourceTaskIds, nameof(sourceTaskIds));
+        if (sourceTaskIds.Length == 0)
+        {
+            throw new ArgumentException("At least one source task id is required.", nameof(sourceTaskIds));
+        }
+
+        var mergeRequest = ToJsonElement(new { source_task_ids = sourceTaskIds });
+        return SendAsync(
+            ct => _api.MergeTasksAsync(taskId, mergeRequest, ct),
+            "POST",
+            $"task/{taskId}/merge",
+            cancellationToken);
+    }
+
+    public string GetTaskTimeInStatusJson(
+        string taskId,
+        bool customTaskIds = false,
+        string? teamId = null)
+    {
+        return GetTaskTimeInStatusJsonAsync(taskId, customTaskIds, teamId).GetAwaiter().GetResult();
+    }
+
+    public Task<string> GetTaskTimeInStatusJsonAsync(
+        string taskId,
+        bool customTaskIds = false,
+        string? teamId = null,
+        CancellationToken cancellationToken = default)
+    {
+        var customTaskIdsValue = GetCustomTaskIdsValue(customTaskIds, teamId);
+        return SendAsync(
+            ct => _api.GetTaskTimeInStatusAsync(taskId, customTaskIdsValue, teamId, ct),
+            "GET",
+            $"task/{taskId}/time_in_status",
+            cancellationToken);
+    }
+
+    public string GetBulkTaskTimeInStatusJson(
+        string[] taskIds,
+        bool customTaskIds = false,
+        string? teamId = null)
+    {
+        return GetBulkTaskTimeInStatusJsonAsync(taskIds, customTaskIds, teamId)
+            .GetAwaiter()
+            .GetResult();
+    }
+
+    public Task<string> GetBulkTaskTimeInStatusJsonAsync(
+        string[] taskIds,
+        bool customTaskIds = false,
+        string? teamId = null,
+        CancellationToken cancellationToken = default)
+    {
+        ArgumentGuard.ThrowIfNull(taskIds, nameof(taskIds));
+        if (taskIds.Length == 0)
+        {
+            throw new ArgumentException("At least one task id is required.", nameof(taskIds));
+        }
+
+        var customTaskIdsValue = GetCustomTaskIdsValue(customTaskIds, teamId);
+        return SendAsync(
+            ct => _api.GetBulkTaskTimeInStatusAsync(
+                string.Join(",", taskIds),
+                customTaskIdsValue,
+                teamId,
+                ct),
+            "GET",
+            "task/bulk_time_in_status/task_ids",
+            cancellationToken);
+    }
+
     private Task<string> UpdateTaskAsync(
         string taskId,
         ClickUpTaskUpdateRequest update,
@@ -254,5 +335,16 @@ public sealed class ClickUpTasksClient : ClickUpEndpointClient
             "PUT",
             $"task/{taskId}",
             cancellationToken);
+    }
+
+    private static string? GetCustomTaskIdsValue(bool customTaskIds, string? teamId)
+    {
+        if (!customTaskIds)
+        {
+            return null;
+        }
+
+        ArgumentGuard.ThrowIfNullOrWhiteSpace(teamId, nameof(teamId));
+        return "true";
     }
 }

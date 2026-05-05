@@ -188,6 +188,56 @@ public sealed class ClickUpClient : IDisposable
         return Spaces.GetSpacesJsonAsync(teamId, archived, cancellationToken);
     }
 
+    public string GetSpaceJson(string spaceId)
+    {
+        return Spaces.GetSpaceJson(spaceId);
+    }
+
+    public Task<string> GetSpaceJsonAsync(
+        string spaceId,
+        CancellationToken cancellationToken = default)
+    {
+        return Spaces.GetSpaceJsonAsync(spaceId, cancellationToken);
+    }
+
+    public string CreateSpaceJson(string teamId, string spaceJson)
+    {
+        return Spaces.CreateSpaceJson(teamId, spaceJson);
+    }
+
+    public Task<string> CreateSpaceJsonAsync(
+        string teamId,
+        string spaceJson,
+        CancellationToken cancellationToken = default)
+    {
+        return Spaces.CreateSpaceJsonAsync(teamId, spaceJson, cancellationToken);
+    }
+
+    public string UpdateSpaceJson(string spaceId, string spaceJson)
+    {
+        return Spaces.UpdateSpaceJson(spaceId, spaceJson);
+    }
+
+    public Task<string> UpdateSpaceJsonAsync(
+        string spaceId,
+        string spaceJson,
+        CancellationToken cancellationToken = default)
+    {
+        return Spaces.UpdateSpaceJsonAsync(spaceId, spaceJson, cancellationToken);
+    }
+
+    public string DeleteSpaceJson(string spaceId)
+    {
+        return Spaces.DeleteSpaceJson(spaceId);
+    }
+
+    public Task<string> DeleteSpaceJsonAsync(
+        string spaceId,
+        CancellationToken cancellationToken = default)
+    {
+        return Spaces.DeleteSpaceJsonAsync(spaceId, cancellationToken);
+    }
+
     public string GetFolderlessListsJson(string spaceId, bool archived = false)
     {
         return Lists.GetFolderlessListsJson(spaceId, archived);
@@ -214,6 +264,56 @@ public sealed class ClickUpClient : IDisposable
         return Folders.GetFoldersJsonAsync(spaceId, archived, cancellationToken);
     }
 
+    public string GetFolderJson(string folderId)
+    {
+        return Folders.GetFolderJson(folderId);
+    }
+
+    public Task<string> GetFolderJsonAsync(
+        string folderId,
+        CancellationToken cancellationToken = default)
+    {
+        return Folders.GetFolderJsonAsync(folderId, cancellationToken);
+    }
+
+    public string CreateFolderJson(string spaceId, string folderJson)
+    {
+        return Folders.CreateFolderJson(spaceId, folderJson);
+    }
+
+    public Task<string> CreateFolderJsonAsync(
+        string spaceId,
+        string folderJson,
+        CancellationToken cancellationToken = default)
+    {
+        return Folders.CreateFolderJsonAsync(spaceId, folderJson, cancellationToken);
+    }
+
+    public string UpdateFolderJson(string folderId, string folderJson)
+    {
+        return Folders.UpdateFolderJson(folderId, folderJson);
+    }
+
+    public Task<string> UpdateFolderJsonAsync(
+        string folderId,
+        string folderJson,
+        CancellationToken cancellationToken = default)
+    {
+        return Folders.UpdateFolderJsonAsync(folderId, folderJson, cancellationToken);
+    }
+
+    public string DeleteFolderJson(string folderId)
+    {
+        return Folders.DeleteFolderJson(folderId);
+    }
+
+    public Task<string> DeleteFolderJsonAsync(
+        string folderId,
+        CancellationToken cancellationToken = default)
+    {
+        return Folders.DeleteFolderJsonAsync(folderId, cancellationToken);
+    }
+
     public string GetFolderListsJson(string folderId, bool archived = false)
     {
         return Lists.GetFolderListsJson(folderId, archived);
@@ -225,6 +325,95 @@ public sealed class ClickUpClient : IDisposable
         CancellationToken cancellationToken = default)
     {
         return Lists.GetFolderListsJsonAsync(folderId, archived, cancellationToken);
+    }
+
+    public string GetListJson(string listId)
+    {
+        return Lists.GetListJson(listId);
+    }
+
+    public Task<string> GetListJsonAsync(
+        string listId,
+        CancellationToken cancellationToken = default)
+    {
+        return Lists.GetListJsonAsync(listId, cancellationToken);
+    }
+
+    public string CreateListJson(string folderId, string listJson)
+    {
+        return Lists.CreateListJson(folderId, listJson);
+    }
+
+    public Task<string> CreateListJsonAsync(
+        string folderId,
+        string listJson,
+        CancellationToken cancellationToken = default)
+    {
+        return Lists.CreateListJsonAsync(folderId, listJson, cancellationToken);
+    }
+
+    public string CreateFolderlessListJson(string spaceId, string listJson)
+    {
+        return Lists.CreateFolderlessListJson(spaceId, listJson);
+    }
+
+    public Task<string> CreateFolderlessListJsonAsync(
+        string spaceId,
+        string listJson,
+        CancellationToken cancellationToken = default)
+    {
+        return Lists.CreateFolderlessListJsonAsync(spaceId, listJson, cancellationToken);
+    }
+
+    public string UpdateListJson(string listId, string listJson)
+    {
+        return Lists.UpdateListJson(listId, listJson);
+    }
+
+    public Task<string> UpdateListJsonAsync(
+        string listId,
+        string listJson,
+        CancellationToken cancellationToken = default)
+    {
+        return Lists.UpdateListJsonAsync(listId, listJson, cancellationToken);
+    }
+
+    public string DeleteListJson(string listId)
+    {
+        return Lists.DeleteListJson(listId);
+    }
+
+    public Task<string> DeleteListJsonAsync(
+        string listId,
+        CancellationToken cancellationToken = default)
+    {
+        return Lists.DeleteListJsonAsync(listId, cancellationToken);
+    }
+
+    public string AddTaskToListJson(string listId, string taskId)
+    {
+        return Lists.AddTaskToListJson(listId, taskId);
+    }
+
+    public Task<string> AddTaskToListJsonAsync(
+        string listId,
+        string taskId,
+        CancellationToken cancellationToken = default)
+    {
+        return Lists.AddTaskToListJsonAsync(listId, taskId, cancellationToken);
+    }
+
+    public string RemoveTaskFromListJson(string listId, string taskId)
+    {
+        return Lists.RemoveTaskFromListJson(listId, taskId);
+    }
+
+    public Task<string> RemoveTaskFromListJsonAsync(
+        string listId,
+        string taskId,
+        CancellationToken cancellationToken = default)
+    {
+        return Lists.RemoveTaskFromListJsonAsync(listId, taskId, cancellationToken);
     }
 
     public string GetTaskJson(string taskId)
@@ -375,6 +564,53 @@ public sealed class ClickUpClient : IDisposable
         CancellationToken cancellationToken = default)
     {
         return Comments.AddTaskCommentJsonAsync(taskId, commentText, notifyAll, cancellationToken);
+    }
+
+    public string MergeTasksJson(string taskId, string[] sourceTaskIds)
+    {
+        return Tasks.MergeTasksJson(taskId, sourceTaskIds);
+    }
+
+    public Task<string> MergeTasksJsonAsync(
+        string taskId,
+        string[] sourceTaskIds,
+        CancellationToken cancellationToken = default)
+    {
+        return Tasks.MergeTasksJsonAsync(taskId, sourceTaskIds, cancellationToken);
+    }
+
+    public string GetTaskTimeInStatusJson(
+        string taskId,
+        bool customTaskIds = false,
+        string? teamId = null)
+    {
+        return Tasks.GetTaskTimeInStatusJson(taskId, customTaskIds, teamId);
+    }
+
+    public Task<string> GetTaskTimeInStatusJsonAsync(
+        string taskId,
+        bool customTaskIds = false,
+        string? teamId = null,
+        CancellationToken cancellationToken = default)
+    {
+        return Tasks.GetTaskTimeInStatusJsonAsync(taskId, customTaskIds, teamId, cancellationToken);
+    }
+
+    public string GetBulkTaskTimeInStatusJson(
+        string[] taskIds,
+        bool customTaskIds = false,
+        string? teamId = null)
+    {
+        return Tasks.GetBulkTaskTimeInStatusJson(taskIds, customTaskIds, teamId);
+    }
+
+    public Task<string> GetBulkTaskTimeInStatusJsonAsync(
+        string[] taskIds,
+        bool customTaskIds = false,
+        string? teamId = null,
+        CancellationToken cancellationToken = default)
+    {
+        return Tasks.GetBulkTaskTimeInStatusJsonAsync(taskIds, customTaskIds, teamId, cancellationToken);
     }
 
     public void Dispose()

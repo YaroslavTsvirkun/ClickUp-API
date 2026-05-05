@@ -28,4 +28,70 @@ public sealed class ClickUpSpacesClient : ClickUpEndpointClient
             $"team/{teamId}/space",
             cancellationToken);
     }
+
+    public string GetSpaceJson(string spaceId)
+    {
+        return GetSpaceJsonAsync(spaceId).GetAwaiter().GetResult();
+    }
+
+    public Task<string> GetSpaceJsonAsync(
+        string spaceId,
+        CancellationToken cancellationToken = default)
+    {
+        return SendAsync(
+            ct => _api.GetSpaceAsync(spaceId, ct),
+            "GET",
+            $"space/{spaceId}",
+            cancellationToken);
+    }
+
+    public string CreateSpaceJson(string teamId, string spaceJson)
+    {
+        return CreateSpaceJsonAsync(teamId, spaceJson).GetAwaiter().GetResult();
+    }
+
+    public Task<string> CreateSpaceJsonAsync(
+        string teamId,
+        string spaceJson,
+        CancellationToken cancellationToken = default)
+    {
+        return SendAsync(
+            ct => _api.CreateSpaceAsync(teamId, ParseJson(spaceJson), ct),
+            "POST",
+            $"team/{teamId}/space",
+            cancellationToken);
+    }
+
+    public string UpdateSpaceJson(string spaceId, string spaceJson)
+    {
+        return UpdateSpaceJsonAsync(spaceId, spaceJson).GetAwaiter().GetResult();
+    }
+
+    public Task<string> UpdateSpaceJsonAsync(
+        string spaceId,
+        string spaceJson,
+        CancellationToken cancellationToken = default)
+    {
+        return SendAsync(
+            ct => _api.UpdateSpaceAsync(spaceId, ParseJson(spaceJson), ct),
+            "PUT",
+            $"space/{spaceId}",
+            cancellationToken);
+    }
+
+    public string DeleteSpaceJson(string spaceId)
+    {
+        return DeleteSpaceJsonAsync(spaceId).GetAwaiter().GetResult();
+    }
+
+    public Task<string> DeleteSpaceJsonAsync(
+        string spaceId,
+        CancellationToken cancellationToken = default)
+    {
+        return SendAsync(
+            ct => _api.DeleteSpaceAsync(spaceId, ct),
+            "DELETE",
+            $"space/{spaceId}",
+            cancellationToken);
+    }
 }
