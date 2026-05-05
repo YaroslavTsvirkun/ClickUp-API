@@ -33,10 +33,10 @@ jobs:
         run: dotnet restore ./ClickUp.Client.slnx
 
       - name: Build
-        run: dotnet build ./ClickUp.Client.slnx -c Release --no-restore
+        run: dotnet build ./ClickUp.Client/ClickUp.Client.csproj -c Release --no-restore
 
       - name: Test
-        run: dotnet test ./ClickUp.Client.Tests/ClickUp.Client.Tests.csproj -c Release --no-build
+        run: dotnet test ./ClickUp.Client.Tests/ClickUp.Client.Tests.csproj -c Release
 
       - name: Pack
         run: dotnet pack ./ClickUp.Client/ClickUp.Client.csproj -c Release --no-build -o ./artifacts /p:ContinuousIntegrationBuild=true
