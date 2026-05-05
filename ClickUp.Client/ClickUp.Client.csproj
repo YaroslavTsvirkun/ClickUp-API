@@ -7,9 +7,29 @@
     <AssemblyName>ClickUp.Client</AssemblyName>
     <RootNamespace>ClickUp.Client</RootNamespace>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <PackageId>ClickUp.Client</PackageId>
+    <Title>ClickUp.Client</Title>
+    <Authors>Yaroslav Tsvirkun</Authors>
+    <Description>ClickUp.Client is a .NET client for ClickUp API v2, ClickUp Public API v3, and OAuth token exchange, designed for PowerShell automation and C# integrations.</Description>
+    <PackageTags>clickup;api;dotnet;refit;powershell;oauth</PackageTags>
+    <PackageProjectUrl>https://github.com/YaroslavTsvirkun/ClickUp-API</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/YaroslavTsvirkun/ClickUp-API.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MinVer" Version="7.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Refit.HttpClientFactory" Version="10.1.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE" Pack="true" PackagePath="\" />
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>

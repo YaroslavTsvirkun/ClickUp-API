@@ -1,6 +1,6 @@
 # ClickUp.Client
 
-`ClickUp.Client` — це .NET-бібліотека для роботи з ClickUp API v2 з PowerShell-скриптів та C#-коду. Вона побудована поверх Refit, тому HTTP-контракти описані декларативно, а не через ручне складання `HttpRequestMessage`.
+`ClickUp.Client` — це .NET-бібліотека для роботи з ClickUp API v2, опублікованими endpoint-ами ClickUp Public API v3 і OAuth token exchange з PowerShell-скриптів та C#-коду. Вона побудована поверх Refit, тому HTTP-контракти описані декларативно, а не через ручне складання `HttpRequestMessage`.
 
 Основний сценарій — автоматизація ClickUp з PowerShell: читання задач, перегляд backlog-ів, створення задач, оновлення статусів, додавання коментарів і робота з тегами. Методи повертають JSON-рядки, які у PowerShell зручно передавати в `ConvertFrom-Json`.
 
@@ -8,6 +8,8 @@
 
 - Категорії endpoint-ів повторюють структуру ClickUp Reference: `Users`, `Tasks`, `Tags`, `Lists`, `Spaces`, `Folders`, `Comments`.
 - Для PowerShell є простий facade `ClickUpClient` з властивостями `$client.Tasks`, `$client.Tags`, `$client.Users` тощо.
+- Є окремий `ClickUpOAuthClient` для `POST /api/v2/oauth/token` без попереднього API token.
+- Є окремий `ClickUpV3Client` для опублікованих ClickUp Public API v3 endpoint-ів: Chat, Attachments, ACL, Audit Logs, Comments, Docs і Task move/time estimates.
 - Для C# є DI-реєстрація через `AddClickUpApiClient`.
 - Авторизація виконується через raw `Authorization` header з `CLICKUP_API_TOKEN`.
 - Є retry для `429`, `5xx` і тимчасових транспортних помилок.
@@ -40,6 +42,8 @@ D:\Code\ClickUp API
 
 Токен передається в ClickUp як сире значення заголовка `Authorization`. Префікс `Bearer` додавати не потрібно.
 
+Для OAuth exchange попередній API token не потрібен: використовуйте `ClickUpOAuthClient`.
+
 ## Швидкий старт
 
 Зібрати solution:
@@ -66,6 +70,22 @@ Get-ChildItem -LiteralPath $dllDir -Filter '*.dll' |
     }
 
 Add-Type -Path (Join-Path $dllDir 'ClickUp.Client.dll')
+```
+
+Отримати OAuth access token за authorization code:
+
+```powershell
+$oauth = [ClickUp.Client.ClickUpOAuthClient]::new()
+
+try {
+    $token = $oauth.GetAccessTokenJson(
+        '<client_id>',
+        '<client_secret>',
+        '<authorization_code>') | ConvertFrom-Json
+}
+finally {
+    $oauth.Dispose()
+}
 ```
 
 Отримати задачі зі списку:
@@ -101,6 +121,19 @@ finally {
 | `$client.Tags` | Tag endpoint-и |
 | `$client.Comments` | Comment endpoint-и |
 | `$client.Raw` | Виклики endpoint-ів, для яких ще немає typed wrapper |
+
+Для ClickUp Public API v3 використовуйте окремий клієнт:
+
+```powershell
+$v3 = [ClickUp.Client.ClickUpV3Client]::FromEnvironment()
+
+try {
+    $channels = $v3.GetChatChannelsJson('<workspace_id>') | ConvertFrom-Json
+}
+finally {
+    $v3.Dispose()
+}
+```
 
 Приклади:
 
@@ -236,6 +269,90 @@ dotnet test .\ClickUp.Client.Tests\ClickUp.Client.Tests.csproj -c Release
 - не потрібен `CLICKUP_API_TOKEN`;
 - немає реальних HTTP-запитів до ClickUp;
 - перевіряються URL-и, HTTP methods, headers, JSON body, retry і категорійний facade.
+
+## Версіювання релізів
+
+У репозиторії налаштоване semver-версіювання через `MinVer`, яке бере версію з git tags під час `dotnet build` і `dotnet pack`.
+
+Поточні правила:
+
+- формат release tag: `vMAJOR.MINOR.PATCH`, наприклад `v0.1.0`;
+- префікс `v` заданий через `MinVerTagPrefix`;
+- якщо в історії ще немає тегів, build-и стартують з діапазону `0.1.x` через `MinVerMinimumMajorMinor=0.1`;
+- нетеговані коміти отримують prerelease-версію з суфіксом `alpha.0.<height>`;
+- коміт, на якому стоїть tag `v0.1.0`, збирається рівно як `0.1.0`.
+
+Типовий потік релізу:
+
+```powershell
+git tag v0.1.0
+git push origin v0.1.0
+dotnet pack .\ClickUp.Client\ClickUp.Client.csproj -c Release
+```
+
+Приклади того, як це працює:
+
+- до першого tag build матиме версію на кшталт `0.1.0-alpha.0.5`;
+- build на commit із tag `v0.1.0` матиме версію `0.1.0`;
+- наступні коміти після `v0.1.0` матимуть версії на кшталт `0.1.1-alpha.0.1`.
+
+Якщо збірка виконується в CI, потрібно підтягувати повну git history і tags. Для GitHub Actions це зазвичай означає `fetch-depth: 0`.
+
+## Публікація на NuGet
+
+У репозиторій додано workflow [publish-nuget.yml](D:/Projects/ClickUp-API/.github/workflows/publish-nuget.yml), який:
+
+- запускається на push tag-ів `v*`;
+- робить `restore`, `build`, `test`, `pack`;
+- публікує пакет у `nuget.org`.
+
+Підтримуються 2 способи автентифікації:
+
+1. Рекомендований: NuGet Trusted Publishing через GitHub Actions OIDC.
+2. Fallback: GitHub secret `NUGET_API_KEY`.
+
+### Варіант 1. Trusted Publishing
+
+1. Увійдіть на `nuget.org`.
+2. Відкрийте `Trusted Publishing`.
+3. Додайте policy для репозиторію:
+   - Owner: `YaroslavTsvirkun`
+   - Repository: `ClickUp-API`
+   - Workflow File: `publish-nuget.yml`
+4. У GitHub repository додайте repository variable `NUGET_ORG_USER` зі значенням вашого `nuget.org` username.
+5. Створіть і запуште release tag, наприклад:
+
+```powershell
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+### Варіант 2. API key
+
+1. Створіть scoped API key на `nuget.org` з правом `Push`.
+2. Додайте його в GitHub repository secret `NUGET_API_KEY`.
+3. Створіть і запуште release tag:
+
+```powershell
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+### Локальна публікація
+
+Якщо потрібно опублікувати вручну з локальної машини:
+
+```powershell
+$env:NUGET_API_KEY = '<your_api_key>'
+dotnet pack .\ClickUp.Client\ClickUp.Client.csproj -c Release
+dotnet nuget push .\ClickUp.Client\bin\Release\ClickUp.Client.*.nupkg --api-key $env:NUGET_API_KEY --source https://api.nuget.org/v3/index.json --skip-duplicate
+```
+
+Примітки:
+
+- package ID зараз `ClickUp.Client`;
+- package metadata, README і LICENSE уже пакуються в `.nupkg`;
+- якщо `ClickUp.Client` уже зайнятий на `nuget.org`, перед першою публікацією потрібно буде змінити `PackageId`.
 
 ## Обробка помилок
 

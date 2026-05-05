@@ -24,6 +24,12 @@ public interface IClickUpRawApi
         [Body] JsonElement body,
         CancellationToken cancellationToken = default);
 
+    [Patch("/{**endpoint}")]
+    Task<string> PatchRawAsync(
+        string endpoint,
+        [Body] JsonElement body,
+        CancellationToken cancellationToken = default);
+
     [Delete("/{**endpoint}")]
     Task<string> DeleteRawAsync(string endpoint, CancellationToken cancellationToken = default);
 }

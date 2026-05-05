@@ -39,7 +39,11 @@ public abstract class ClickUpEndpointClient
 
     protected Uri BuildUri(string endpoint)
     {
-        return new Uri(BaseUri, NormalizeEndpoint(endpoint));
+        var baseUri = BaseUri.AbsoluteUri.EndsWith("/", StringComparison.Ordinal)
+            ? BaseUri.AbsoluteUri
+            : $"{BaseUri.AbsoluteUri}/";
+
+        return new Uri(baseUri + NormalizeEndpoint(endpoint), UriKind.Absolute);
     }
 
     protected static JsonElement ParseJson(string? json)

@@ -49,6 +49,11 @@ public sealed class ClickUpRawClient : ClickUpEndpointClient
                 "PUT",
                 normalizedEndpoint,
                 cancellationToken).ConfigureAwait(false),
+            "PATCH" => await SendAsync(
+                ct => _api.PatchRawAsync(normalizedEndpoint, ParseJson(jsonBody), ct),
+                "PATCH",
+                normalizedEndpoint,
+                cancellationToken).ConfigureAwait(false),
             "DELETE" => await SendAsync(
                 ct => _api.DeleteRawAsync(normalizedEndpoint, ct),
                 "DELETE",

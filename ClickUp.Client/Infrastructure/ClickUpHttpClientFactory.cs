@@ -25,6 +25,22 @@ internal static class ClickUpHttpClientFactory
         };
     }
 
+    public static HttpClient CreateAnonymous(
+        ClickUpClientOptions options,
+        HttpMessageHandler? primaryHandler = null)
+    {
+        var retryHandler = new ClickUpRetryHandler(options)
+        {
+            InnerHandler = primaryHandler ?? new SocketsHttpHandler(),
+        };
+
+        return new HttpClient(retryHandler, disposeHandler: true)
+        {
+            BaseAddress = new Uri(options.BaseUrl.TrimEnd('/')),
+            Timeout = options.Timeout,
+        };
+    }
+
     public static RefitSettings CreateRefitSettings()
     {
         return new RefitSettings

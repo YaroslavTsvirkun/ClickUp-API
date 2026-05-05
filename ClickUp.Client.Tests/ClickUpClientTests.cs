@@ -1,4 +1,5 @@
 using System.Net;
+using System.Text;
 using System.Text.Json;
 using ClickUp.Client;
 using Xunit;
@@ -131,5 +132,98 @@ public sealed class ClickUpClientTests
         var request = Assert.Single(handler.Requests);
         Assert.Equal("https://api.clickup.com/api/v2/space/space%201/tag", request.Uri.AbsoluteUri);
         Assert.Equal("GET", request.Method);
+    }
+
+    [Fact]
+    public async Task ExchangesOAuthCodeWithoutAuthorizationHeader()
+    {
+        using var handler = new RecordingHandler(_ =>
+            TestHttp.JsonResponse("""{"access_token":"pk_oauth"}"""));
+        using var client = TestClient.CreateOAuth(handler);
+
+        await client.GetAccessTokenJsonAsync(
+            "client_id",
+            "client_secret",
+            "code_123",
+            TestContext.Current.CancellationToken);
+
+        var request = Assert.Single(handler.Requests);
+        Assert.Equal("https://api.clickup.com/api/v2/oauth/token", request.Uri.AbsoluteUri);
+        Assert.Equal("POST", request.Method);
+        Assert.False(request.Headers.ContainsKey("Authorization"));
+        Assert.Equal(
+            """{"client_id":"client_id","client_secret":"client_secret","code":"code_123"}""",
+            request.Body);
+    }
+
+    [Fact]
+    public async Task UsesV3BaseUrlForChatRequests()
+    {
+        using var handler = new RecordingHandler(_ => TestHttp.JsonResponse("""{"data":[]}"""));
+        using var client = TestClient.CreateV3(handler);
+
+        await client.GetChatChannelsJsonAsync(
+            "workspace 1",
+            new Dictionary<string, string?>
+            {
+                ["limit"] = "25",
+                ["cursor"] = "next_page",
+            },
+            TestContext.Current.CancellationToken);
+
+        var request = Assert.Single(handler.Requests);
+        Assert.Equal(
+            "https://api.clickup.com/api/v3/workspaces/workspace%201/chat/channels?limit=25&cursor=next_page",
+            request.Uri.AbsoluteUri);
+        Assert.Equal("GET", request.Method);
+        Assert.Equal("pk_test", request.Headers["Authorization"]);
+    }
+
+    [Fact]
+    public async Task SupportsPatchRequestsForV3Endpoints()
+    {
+        using var handler = new RecordingHandler(_ => TestHttp.JsonResponse("""{"id":"channel_1"}"""));
+        using var client = TestClient.CreateV3(handler);
+        const string body = """{"name":"Renamed channel"}""";
+
+        await client.UpdateChatChannelJsonAsync(
+            "workspace_1",
+            "channel_1",
+            body,
+            TestContext.Current.CancellationToken);
+
+        var request = Assert.Single(handler.Requests);
+        Assert.Equal("https://api.clickup.com/api/v3/workspaces/workspace_1/chat/channels/channel_1", request.Uri.AbsoluteUri);
+        Assert.Equal("PATCH", request.Method);
+        Assert.Equal(body, request.Body);
+        Assert.Equal("application/json; charset=utf-8", request.ContentType);
+    }
+
+    [Fact]
+    public async Task UploadsV3AttachmentsAsMultipartFormData()
+    {
+        using var handler = new RecordingHandler(_ => TestHttp.JsonResponse("""{"id":"attachment_1"}"""));
+        using var client = TestClient.CreateV3(handler);
+        using var content = new MemoryStream(Encoding.UTF8.GetBytes("hello from codex"));
+
+        await client.CreateAttachmentJsonAsync(
+            "workspace 1",
+            "tasks",
+            "task 1",
+            content,
+            "note.txt",
+            overrideFileName: "custom-name.txt",
+            cancellationToken: TestContext.Current.CancellationToken);
+
+        var request = Assert.Single(handler.Requests);
+        Assert.Equal(
+            "https://api.clickup.com/api/v3/workspaces/workspace%201/tasks/task%201/attachments",
+            request.Uri.AbsoluteUri);
+        Assert.Equal("POST", request.Method);
+        Assert.StartsWith("multipart/form-data;", request.ContentType, StringComparison.OrdinalIgnoreCase);
+        Assert.NotNull(request.Body);
+        Assert.Contains("note.txt", request.Body, StringComparison.Ordinal);
+        Assert.Contains("custom-name.txt", request.Body, StringComparison.Ordinal);
+        Assert.Contains("hello from codex", request.Body, StringComparison.Ordinal);
     }
 }
