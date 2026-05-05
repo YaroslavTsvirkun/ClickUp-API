@@ -56,9 +56,9 @@ public sealed class ClickUpOAuthClient : ClickUpEndpointClient, IDisposable
         string code,
         CancellationToken cancellationToken = default)
     {
-        ArgumentException.ThrowIfNullOrWhiteSpace(clientId);
-        ArgumentException.ThrowIfNullOrWhiteSpace(clientSecret);
-        ArgumentException.ThrowIfNullOrWhiteSpace(code);
+        ArgumentGuard.ThrowIfNullOrWhiteSpace(clientId, nameof(clientId));
+        ArgumentGuard.ThrowIfNullOrWhiteSpace(clientSecret, nameof(clientSecret));
+        ArgumentGuard.ThrowIfNullOrWhiteSpace(code, nameof(code));
 
         var request = new ClickUpOAuthTokenRequest
         {

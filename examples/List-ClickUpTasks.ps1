@@ -9,7 +9,21 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $repoRoot = Split-Path -Parent $PSScriptRoot
-$dllDir = Join-Path $repoRoot "ClickUp.Client\bin\$Configuration\net8.0"
+$targetFrameworks = if ($PSVersionTable.PSEdition -eq 'Desktop') {
+    @('net48', 'netstandard2.0', 'net10.0', 'net9.0', 'net8.0')
+}
+else {
+    @('net10.0', 'net9.0', 'net8.0', 'netstandard2.0', 'net48')
+}
+$dllDir = $targetFrameworks |
+    ForEach-Object { Join-Path $repoRoot "ClickUp.Client\bin\$Configuration\$_" } |
+    Where-Object { Test-Path -LiteralPath (Join-Path $_ 'ClickUp.Client.dll') } |
+    Select-Object -First 1
+
+if (-not $dllDir) {
+    throw "Build the library first: dotnet build `"$repoRoot\ClickUp.Client\ClickUp.Client.csproj`" -c $Configuration"
+}
+
 $dllPath = Join-Path $dllDir 'ClickUp.Client.dll'
 
 if (-not (Test-Path -LiteralPath $dllPath)) {

@@ -74,7 +74,7 @@ internal sealed class ClickUpRetryHandler : DelegatingHandler
 
     private static bool ShouldRetry(HttpStatusCode statusCode)
     {
-        return statusCode == HttpStatusCode.TooManyRequests || (int)statusCode >= 500;
+        return (int)statusCode == 429 || (int)statusCode >= 500;
     }
 
     private static bool IsTransient(Exception exception, CancellationToken cancellationToken)
@@ -113,7 +113,9 @@ internal sealed class ClickUpRetryHandler : DelegatingHandler
             HttpMethod method,
             Uri? requestUri,
             Version version,
+#if NET5_0_OR_GREATER
             HttpVersionPolicy versionPolicy,
+#endif
             IReadOnlyDictionary<string, string[]> headers,
             byte[]? content,
             IReadOnlyDictionary<string, string[]> contentHeaders)
@@ -121,7 +123,9 @@ internal sealed class ClickUpRetryHandler : DelegatingHandler
             Method = method;
             RequestUri = requestUri;
             Version = version;
+#if NET5_0_OR_GREATER
             VersionPolicy = versionPolicy;
+#endif
             Headers = headers;
             Content = content;
             ContentHeaders = contentHeaders;
@@ -133,7 +137,9 @@ internal sealed class ClickUpRetryHandler : DelegatingHandler
 
         private Version Version { get; }
 
+#if NET5_0_OR_GREATER
         private HttpVersionPolicy VersionPolicy { get; }
+#endif
 
         private IReadOnlyDictionary<string, string[]> Headers { get; }
 
@@ -154,7 +160,7 @@ internal sealed class ClickUpRetryHandler : DelegatingHandler
 
             if (request.Content is not null)
             {
-                content = await request.Content.ReadAsByteArrayAsync(cancellationToken)
+                content = await request.Content.ReadAsByteArrayCompatAsync(cancellationToken)
                     .ConfigureAwait(false);
                 contentHeaders = request.Content.Headers.ToDictionary(
                     header => header.Key,
@@ -166,7 +172,9 @@ internal sealed class ClickUpRetryHandler : DelegatingHandler
                 request.Method,
                 request.RequestUri,
                 request.Version,
+#if NET5_0_OR_GREATER
                 request.VersionPolicy,
+#endif
                 headers,
                 content,
                 contentHeaders);
@@ -177,8 +185,11 @@ internal sealed class ClickUpRetryHandler : DelegatingHandler
             var request = new HttpRequestMessage(Method, RequestUri)
             {
                 Version = Version,
-                VersionPolicy = VersionPolicy,
             };
+
+#if NET5_0_OR_GREATER
+            request.VersionPolicy = VersionPolicy;
+#endif
 
             foreach (var header in Headers)
             {

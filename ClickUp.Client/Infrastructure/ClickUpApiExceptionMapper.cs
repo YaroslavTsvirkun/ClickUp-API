@@ -33,7 +33,8 @@ internal static class ClickUpApiExceptionMapper
 
         try
         {
-            using var document = JsonDocument.Parse(responseBody);
+            var payload = responseBody ?? "{}";
+            using var document = JsonDocument.Parse(payload);
             var root = document.RootElement;
 
             foreach (var propertyName in new[] { "err", "error", "message" })

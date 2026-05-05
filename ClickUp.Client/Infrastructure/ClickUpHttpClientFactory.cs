@@ -11,7 +11,7 @@ internal static class ClickUpHttpClientFactory
     {
         var authHandler = new ClickUpAuthHandler(apiToken)
         {
-            InnerHandler = primaryHandler ?? new SocketsHttpHandler(),
+            InnerHandler = primaryHandler ?? CreatePrimaryHandler(),
         };
         var retryHandler = new ClickUpRetryHandler(options)
         {
@@ -31,7 +31,7 @@ internal static class ClickUpHttpClientFactory
     {
         var retryHandler = new ClickUpRetryHandler(options)
         {
-            InnerHandler = primaryHandler ?? new SocketsHttpHandler(),
+            InnerHandler = primaryHandler ?? CreatePrimaryHandler(),
         };
 
         return new HttpClient(retryHandler, disposeHandler: true)
@@ -53,5 +53,14 @@ internal static class ClickUpHttpClientFactory
     public static TApi CreateApi<TApi>(HttpClient httpClient)
     {
         return RestService.For<TApi>(httpClient, CreateRefitSettings());
+    }
+
+    private static HttpMessageHandler CreatePrimaryHandler()
+    {
+#if NETSTANDARD2_0 || NET48
+        return new HttpClientHandler();
+#else
+        return new SocketsHttpHandler();
+#endif
     }
 }

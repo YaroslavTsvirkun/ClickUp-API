@@ -519,9 +519,9 @@ public sealed class ClickUpV3Client : ClickUpEndpointClient, IDisposable
         string formFieldName = "attachment",
         CancellationToken cancellationToken = default)
     {
-        ArgumentException.ThrowIfNullOrWhiteSpace(filePath);
+        ArgumentGuard.ThrowIfNullOrWhiteSpace(filePath, nameof(filePath));
 
-        await using var content = File.OpenRead(filePath);
+        using var content = File.OpenRead(filePath);
         return await CreateAttachmentJsonAsync(
             workspaceId,
             entityType,
@@ -564,9 +564,9 @@ public sealed class ClickUpV3Client : ClickUpEndpointClient, IDisposable
         string formFieldName = "attachment",
         CancellationToken cancellationToken = default)
     {
-        ArgumentNullException.ThrowIfNull(content);
-        ArgumentException.ThrowIfNullOrWhiteSpace(fileName);
-        ArgumentException.ThrowIfNullOrWhiteSpace(formFieldName);
+        ArgumentGuard.ThrowIfNull(content, nameof(content));
+        ArgumentGuard.ThrowIfNullOrWhiteSpace(fileName, nameof(fileName));
+        ArgumentGuard.ThrowIfNullOrWhiteSpace(formFieldName, nameof(formFieldName));
 
         using var multipart = new MultipartFormDataContent();
         using var streamContent = new StreamContent(content);
@@ -912,7 +912,7 @@ public sealed class ClickUpV3Client : ClickUpEndpointClient, IDisposable
             using var response = await _httpClient.SendAsync(request, cancellationToken).ConfigureAwait(false);
             var responseBody = response.Content is null
                 ? string.Empty
-                : await response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                : await response.Content.ReadAsStringCompatAsync(cancellationToken).ConfigureAwait(false);
 
             if (!response.IsSuccessStatusCode)
             {
@@ -938,7 +938,7 @@ public sealed class ClickUpV3Client : ClickUpEndpointClient, IDisposable
 
     private static string PathSegment(string value)
     {
-        ArgumentException.ThrowIfNullOrWhiteSpace(value);
+        ArgumentGuard.ThrowIfNullOrWhiteSpace(value, nameof(value));
         return value;
     }
 }

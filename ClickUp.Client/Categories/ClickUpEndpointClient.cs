@@ -48,13 +48,16 @@ public abstract class ClickUpEndpointClient
 
     protected static JsonElement ParseJson(string? json)
     {
-        using var document = JsonDocument.Parse(string.IsNullOrWhiteSpace(json) ? "{}" : json);
+        var payload = string.IsNullOrWhiteSpace(json) ? "{}" : json!;
+        using var document = JsonDocument.Parse(payload);
         return document.RootElement.Clone();
     }
 
     protected static JsonElement ToJsonElement<T>(T value)
     {
-        return JsonSerializer.SerializeToElement(value, ClickUpClient.JsonOptions);
+        using var document = JsonDocument.Parse(
+            JsonSerializer.Serialize(value, ClickUpClient.JsonOptions));
+        return document.RootElement.Clone();
     }
 
     protected static string NormalizeEndpoint(string endpoint)

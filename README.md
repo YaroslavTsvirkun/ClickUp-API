@@ -36,8 +36,10 @@ D:\Code\ClickUp API
 
 ## Вимоги
 
-- .NET SDK 8 або новіший.
-- PowerShell 7 або новіший для скриптів.
+- .NET SDK 10 або новіший для повного multi-target build (`net8.0`, `net9.0`, `net10.0`, `netstandard2.0`, `net48`).
+- .NET SDK 9 можна використовувати для окремого build лише під `net8.0`, `net9.0` або `netstandard2.0`.
+- .NET SDK 8 можна використовувати для окремого build лише під `net8.0` або `netstandard2.0`.
+- PowerShell 7 або новіший для сучасних target framework-ів; для Windows PowerShell 5.1 на Windows доступний `net48`.
 - ClickUp personal API token у змінній середовища `CLICKUP_API_TOKEN`.
 
 Токен передається в ClickUp як сире значення заголовка `Authorization`. Префікс `Bearer` додавати не потрібно.
@@ -61,7 +63,8 @@ $env:CLICKUP_API_TOKEN = 'pk_your_personal_token'
 Підключити бібліотеку в PowerShell:
 
 ```powershell
-$dllDir = '.\ClickUp.Client\bin\Release\net8.0'
+$targetFramework = 'net10.0' # або 'net9.0' / 'net8.0' / 'netstandard2.0' / 'net48'
+$dllDir = ".\ClickUp.Client\bin\Release\$targetFramework"
 
 Get-ChildItem -LiteralPath $dllDir -Filter '*.dll' |
     Where-Object { $_.Name -ne 'ClickUp.Client.dll' } |
@@ -104,7 +107,7 @@ finally {
 }
 ```
 
-Після build NuGet-залежності, включно з `Refit.dll`, копіюються в `ClickUp.Client\bin\Release\net8.0`. Саме тому в PowerShell потрібно завантажувати всі DLL з цієї папки, а потім `ClickUp.Client.dll`.
+Після build NuGet-залежності, включно з `Refit.dll`, копіюються в `ClickUp.Client\bin\Release\net10.0`, `net9.0`, `net8.0`, `netstandard2.0` або `net48`. Саме тому в PowerShell потрібно завантажувати всі DLL з папки вибраного target framework, а потім `ClickUp.Client.dll`.
 
 ## Категорії API
 
@@ -212,6 +215,8 @@ $client.Raw.RequestJson('GET', 'team') | ConvertFrom-Json
 ```
 
 Скрипт завантажує DLL, створює `ClickUpClient` з `CLICKUP_API_TOKEN`, читає задачі зі списку і виводить коротку таблицю.
+
+На PowerShell 7 він спочатку шукає `net10.0`, `net9.0`, `net8.0`, а потім fallback-иться на `netstandard2.0`. На Windows PowerShell 5.1 пріоритет віддається `net48`.
 
 ## Використання з C#
 
@@ -382,6 +387,16 @@ dotnet test .\ClickUp.Client.slnx -c Release
 ```
 
 ## Сумісність
+
+Пакет зараз таргетує:
+
+- `net8.0`
+- `net9.0`
+- `net10.0`
+- `netstandard2.0`
+- `net48`
+
+`netstandard2.0` призначений для широкої сумісності з бібліотеками та older host-ами, а `net48` покриває legacy .NET Framework та Windows PowerShell 5.1 сценарії.
 
 Старі facade-методи на `ClickUpClient`, наприклад `GetAllTasksJson()` або `AddTaskCommentJson()`, залишені для сумісності з уже написаними скриптами.
 
