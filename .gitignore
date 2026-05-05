@@ -5,7 +5,6 @@ ClickUp.Client/bin/
 ClickUp.Client/obj/
 ClickUp.Client.Tests/bin/
 ClickUp.Client.Tests/obj/
-.vs/
 
 # Visual Studio
 .vs/
