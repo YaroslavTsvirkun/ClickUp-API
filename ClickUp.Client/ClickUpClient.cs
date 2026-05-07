@@ -191,6 +191,31 @@ public sealed class ClickUpClient : IDisposable
         return Workspaces.GetTeamsJsonAsync(cancellationToken);
     }
 
+    public string GetSharedHierarchyJson(string teamId)
+    {
+        return Workspaces.GetSharedHierarchyJson(teamId);
+    }
+
+    public Task<string> GetSharedHierarchyJsonAsync(
+        string teamId,
+        CancellationToken cancellationToken = default)
+    {
+        return Workspaces.GetSharedHierarchyJsonAsync(teamId, cancellationToken);
+    }
+
+    public string GetCustomRolesJson(string teamId, bool? includeMembers = null)
+    {
+        return Workspaces.GetCustomRolesJson(teamId, includeMembers);
+    }
+
+    public Task<string> GetCustomRolesJsonAsync(
+        string teamId,
+        bool? includeMembers = null,
+        CancellationToken cancellationToken = default)
+    {
+        return Workspaces.GetCustomRolesJsonAsync(teamId, includeMembers, cancellationToken);
+    }
+
     public string GetSpacesJson(string teamId, bool archived = false)
     {
         return Spaces.GetSpacesJson(teamId, archived);

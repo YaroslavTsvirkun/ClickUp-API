@@ -31,4 +31,40 @@ public sealed class ClickUpWorkspacesClient : ClickUpEndpointClient
     {
         return GetWorkspacesJsonAsync(cancellationToken);
     }
+
+    public string GetSharedHierarchyJson(string teamId)
+    {
+        return GetSharedHierarchyJsonAsync(teamId).GetAwaiter().GetResult();
+    }
+
+    public Task<string> GetSharedHierarchyJsonAsync(
+        string teamId,
+        CancellationToken cancellationToken = default)
+    {
+        return SendAsync(
+            ct => _api.GetSharedHierarchyAsync(teamId, ct),
+            "GET",
+            $"team/{teamId}/shared",
+            cancellationToken);
+    }
+
+    public string GetCustomRolesJson(string teamId, bool? includeMembers = null)
+    {
+        return GetCustomRolesJsonAsync(teamId, includeMembers).GetAwaiter().GetResult();
+    }
+
+    public Task<string> GetCustomRolesJsonAsync(
+        string teamId,
+        bool? includeMembers = null,
+        CancellationToken cancellationToken = default)
+    {
+        return SendAsync(
+            ct => _api.GetCustomRolesAsync(
+                teamId,
+                includeMembers.HasValue ? BoolString(includeMembers.Value) : null,
+                ct),
+            "GET",
+            $"team/{teamId}/customroles",
+            cancellationToken);
+    }
 }

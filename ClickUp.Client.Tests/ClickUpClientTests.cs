@@ -120,6 +120,40 @@ public sealed class ClickUpClientTests
     }
 
     [Fact]
+    public async Task SupportsWorkspaceSharedHierarchyAndCustomRolesEndpoints()
+    {
+        var responses = new Queue<HttpResponseMessage>(new[]
+        {
+            TestHttp.JsonResponse("""{"tasks":[],"lists":[],"folders":[]}"""),
+            TestHttp.JsonResponse("""{"custom_roles":[]}"""),
+            TestHttp.JsonResponse("""{"custom_roles":[]}"""),
+        });
+        using var handler = new RecordingHandler(_ => responses.Dequeue());
+        using var client = TestClient.Create(handler);
+
+        await client.Workspaces.GetSharedHierarchyJsonAsync(
+            "team 1",
+            TestContext.Current.CancellationToken);
+        await client.Workspaces.GetCustomRolesJsonAsync(
+            "team_1",
+            includeMembers: true,
+            cancellationToken: TestContext.Current.CancellationToken);
+        await client.Workspaces.GetCustomRolesJsonAsync(
+            "team-2",
+            cancellationToken: TestContext.Current.CancellationToken);
+
+        Assert.Equal(3, handler.Requests.Count);
+        Assert.Equal("https://api.clickup.com/api/v2/team/team%201/shared", handler.Requests[0].Uri.AbsoluteUri);
+        Assert.Equal("GET", handler.Requests[0].Method);
+        Assert.Equal(
+            "https://api.clickup.com/api/v2/team/team_1/customroles?include_members=true",
+            handler.Requests[1].Uri.AbsoluteUri);
+        Assert.Equal("GET", handler.Requests[1].Method);
+        Assert.Equal("https://api.clickup.com/api/v2/team/team-2/customroles", handler.Requests[2].Uri.AbsoluteUri);
+        Assert.Equal("GET", handler.Requests[2].Method);
+    }
+
+    [Fact]
     public async Task SendsTagRequestsThroughTagsCategory()
     {
         using var handler = new RecordingHandler(_ => TestHttp.JsonResponse("""{"tags":[]}"""));
