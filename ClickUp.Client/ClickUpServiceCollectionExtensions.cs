@@ -1,3 +1,4 @@
+using ClickUp.Client.Abstractions.Checklists;
 using ClickUp.Client.Abstractions.Comments;
 using ClickUp.Client.Abstractions.Folders;
 using ClickUp.Client.Abstractions.Lists;
@@ -6,6 +7,7 @@ using ClickUp.Client.Abstractions.Spaces;
 using ClickUp.Client.Abstractions.Tags;
 using ClickUp.Client.Abstractions.Tasks;
 using ClickUp.Client.Abstractions.Users;
+using ClickUp.Client.Abstractions.Views;
 using ClickUp.Client.Abstractions.Workspaces;
 using ClickUp.Client.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
@@ -37,8 +39,10 @@ public static class ClickUpServiceCollectionExtensions
         AddRefitApi<IClickUpWorkspacesApi>(services);
         AddRefitApi<IClickUpSpacesApi>(services);
         AddRefitApi<IClickUpFoldersApi>(services);
+        AddRefitApi<IClickUpViewsApi>(services);
         AddRefitApi<IClickUpListsApi>(services);
         AddRefitApi<IClickUpTasksApi>(services);
+        AddRefitApi<IClickUpChecklistsApi>(services);
         AddRefitApi<IClickUpTagsApi>(services);
         AddRefitApi<IClickUpCommentsApi>(services);
         AddRefitApi<IClickUpRawApi>(services);
@@ -49,8 +53,10 @@ public static class ClickUpServiceCollectionExtensions
                 provider.GetRequiredService<IClickUpWorkspacesApi>(),
                 provider.GetRequiredService<IClickUpSpacesApi>(),
                 provider.GetRequiredService<IClickUpFoldersApi>(),
+                provider.GetRequiredService<IClickUpViewsApi>(),
                 provider.GetRequiredService<IClickUpListsApi>(),
                 provider.GetRequiredService<IClickUpTasksApi>(),
+                provider.GetRequiredService<IClickUpChecklistsApi>(),
                 provider.GetRequiredService<IClickUpTagsApi>(),
                 provider.GetRequiredService<IClickUpCommentsApi>(),
                 provider.GetRequiredService<IClickUpRawApi>(),

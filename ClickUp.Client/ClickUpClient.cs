@@ -1,4 +1,5 @@
 using System.Text.Json;
+using ClickUp.Client.Abstractions.Checklists;
 using ClickUp.Client.Abstractions.Comments;
 using ClickUp.Client.Abstractions.Folders;
 using ClickUp.Client.Abstractions.Lists;
@@ -7,6 +8,7 @@ using ClickUp.Client.Abstractions.Spaces;
 using ClickUp.Client.Abstractions.Tags;
 using ClickUp.Client.Abstractions.Tasks;
 using ClickUp.Client.Abstractions.Users;
+using ClickUp.Client.Abstractions.Views;
 using ClickUp.Client.Abstractions.Workspaces;
 using ClickUp.Client.Categories;
 using ClickUp.Client.Infrastructure;
@@ -60,11 +62,17 @@ public sealed class ClickUpClient : IDisposable
         Folders = new ClickUpFoldersClient(
             ClickUpHttpClientFactory.CreateApi<IClickUpFoldersApi>(httpClient),
             baseUri);
+        Views = new ClickUpViewsClient(
+            ClickUpHttpClientFactory.CreateApi<IClickUpViewsApi>(httpClient),
+            baseUri);
         Lists = new ClickUpListsClient(
             ClickUpHttpClientFactory.CreateApi<IClickUpListsApi>(httpClient),
             baseUri);
         Tasks = new ClickUpTasksClient(
             ClickUpHttpClientFactory.CreateApi<IClickUpTasksApi>(httpClient),
+            baseUri);
+        Checklists = new ClickUpChecklistsClient(
+            ClickUpHttpClientFactory.CreateApi<IClickUpChecklistsApi>(httpClient),
             baseUri);
         Tags = new ClickUpTagsClient(
             ClickUpHttpClientFactory.CreateApi<IClickUpTagsApi>(httpClient),
@@ -82,8 +90,10 @@ public sealed class ClickUpClient : IDisposable
         IClickUpWorkspacesApi workspacesApi,
         IClickUpSpacesApi spacesApi,
         IClickUpFoldersApi foldersApi,
+        IClickUpViewsApi viewsApi,
         IClickUpListsApi listsApi,
         IClickUpTasksApi tasksApi,
+        IClickUpChecklistsApi checklistsApi,
         IClickUpTagsApi tagsApi,
         IClickUpCommentsApi commentsApi,
         IClickUpRawApi rawApi,
@@ -93,8 +103,10 @@ public sealed class ClickUpClient : IDisposable
         Workspaces = new ClickUpWorkspacesClient(workspacesApi, baseUri);
         Spaces = new ClickUpSpacesClient(spacesApi, baseUri);
         Folders = new ClickUpFoldersClient(foldersApi, baseUri);
+        Views = new ClickUpViewsClient(viewsApi, baseUri);
         Lists = new ClickUpListsClient(listsApi, baseUri);
         Tasks = new ClickUpTasksClient(tasksApi, baseUri);
+        Checklists = new ClickUpChecklistsClient(checklistsApi, baseUri);
         Tags = new ClickUpTagsClient(tagsApi, baseUri);
         Comments = new ClickUpCommentsClient(commentsApi, baseUri);
         Raw = new ClickUpRawClient(rawApi, baseUri);
@@ -108,9 +120,13 @@ public sealed class ClickUpClient : IDisposable
 
     public ClickUpFoldersClient Folders { get; }
 
+    public ClickUpViewsClient Views { get; }
+
     public ClickUpListsClient Lists { get; }
 
     public ClickUpTasksClient Tasks { get; }
+
+    public ClickUpChecklistsClient Checklists { get; }
 
     public ClickUpTagsClient Tags { get; }
 
@@ -312,6 +328,44 @@ public sealed class ClickUpClient : IDisposable
         CancellationToken cancellationToken = default)
     {
         return Folders.DeleteFolderJsonAsync(folderId, cancellationToken);
+    }
+
+    public string GetFolderViewsJson(string folderId)
+    {
+        return Views.GetFolderViewsJson(folderId);
+    }
+
+    public Task<string> GetFolderViewsJsonAsync(
+        string folderId,
+        CancellationToken cancellationToken = default)
+    {
+        return Views.GetFolderViewsJsonAsync(folderId, cancellationToken);
+    }
+
+    public string CreateFolderViewJson(string folderId, string viewJson)
+    {
+        return Views.CreateFolderViewJson(folderId, viewJson);
+    }
+
+    public Task<string> CreateFolderViewJsonAsync(
+        string folderId,
+        string viewJson,
+        CancellationToken cancellationToken = default)
+    {
+        return Views.CreateFolderViewJsonAsync(folderId, viewJson, cancellationToken);
+    }
+
+    public string GetViewTasksJson(string viewId, int page = 0)
+    {
+        return Views.GetViewTasksJson(viewId, page);
+    }
+
+    public Task<string> GetViewTasksJsonAsync(
+        string viewId,
+        int page = 0,
+        CancellationToken cancellationToken = default)
+    {
+        return Views.GetViewTasksJsonAsync(viewId, page, cancellationToken);
     }
 
     public string GetFolderListsJson(string folderId, bool archived = false)
@@ -550,6 +604,220 @@ public sealed class ClickUpClient : IDisposable
         CancellationToken cancellationToken = default)
     {
         return Tasks.AssignTaskAndSetStatusJsonAsync(taskId, status, userIds, cancellationToken);
+    }
+
+    public string AddTaskDependencyJson(
+        string taskId,
+        string? dependsOnTaskId = null,
+        string? dependencyOfTaskId = null,
+        bool customTaskIds = false,
+        string? teamId = null)
+    {
+        return Tasks.AddTaskDependencyJson(
+            taskId,
+            dependsOnTaskId,
+            dependencyOfTaskId,
+            customTaskIds,
+            teamId);
+    }
+
+    public Task<string> AddTaskDependencyJsonAsync(
+        string taskId,
+        string? dependsOnTaskId = null,
+        string? dependencyOfTaskId = null,
+        bool customTaskIds = false,
+        string? teamId = null,
+        CancellationToken cancellationToken = default)
+    {
+        return Tasks.AddTaskDependencyJsonAsync(
+            taskId,
+            dependsOnTaskId,
+            dependencyOfTaskId,
+            customTaskIds,
+            teamId,
+            cancellationToken);
+    }
+
+    public string DeleteTaskDependencyJson(
+        string taskId,
+        string? dependsOnTaskId = null,
+        string? dependencyOfTaskId = null,
+        bool customTaskIds = false,
+        string? teamId = null)
+    {
+        return Tasks.DeleteTaskDependencyJson(
+            taskId,
+            dependsOnTaskId,
+            dependencyOfTaskId,
+            customTaskIds,
+            teamId);
+    }
+
+    public Task<string> DeleteTaskDependencyJsonAsync(
+        string taskId,
+        string? dependsOnTaskId = null,
+        string? dependencyOfTaskId = null,
+        bool customTaskIds = false,
+        string? teamId = null,
+        CancellationToken cancellationToken = default)
+    {
+        return Tasks.DeleteTaskDependencyJsonAsync(
+            taskId,
+            dependsOnTaskId,
+            dependencyOfTaskId,
+            customTaskIds,
+            teamId,
+            cancellationToken);
+    }
+
+    public string AddTaskLinkJson(
+        string taskId,
+        string linksToTaskId,
+        bool customTaskIds = false,
+        string? teamId = null)
+    {
+        return Tasks.AddTaskLinkJson(taskId, linksToTaskId, customTaskIds, teamId);
+    }
+
+    public Task<string> AddTaskLinkJsonAsync(
+        string taskId,
+        string linksToTaskId,
+        bool customTaskIds = false,
+        string? teamId = null,
+        CancellationToken cancellationToken = default)
+    {
+        return Tasks.AddTaskLinkJsonAsync(
+            taskId,
+            linksToTaskId,
+            customTaskIds,
+            teamId,
+            cancellationToken);
+    }
+
+    public string DeleteTaskLinkJson(
+        string taskId,
+        string linksToTaskId,
+        bool customTaskIds = false,
+        string? teamId = null)
+    {
+        return Tasks.DeleteTaskLinkJson(taskId, linksToTaskId, customTaskIds, teamId);
+    }
+
+    public Task<string> DeleteTaskLinkJsonAsync(
+        string taskId,
+        string linksToTaskId,
+        bool customTaskIds = false,
+        string? teamId = null,
+        CancellationToken cancellationToken = default)
+    {
+        return Tasks.DeleteTaskLinkJsonAsync(
+            taskId,
+            linksToTaskId,
+            customTaskIds,
+            teamId,
+            cancellationToken);
+    }
+
+    public string CreateChecklistJson(
+        string taskId,
+        string checklistJson,
+        bool customTaskIds = false,
+        string? teamId = null)
+    {
+        return Checklists.CreateChecklistJson(taskId, checklistJson, customTaskIds, teamId);
+    }
+
+    public Task<string> CreateChecklistJsonAsync(
+        string taskId,
+        string checklistJson,
+        bool customTaskIds = false,
+        string? teamId = null,
+        CancellationToken cancellationToken = default)
+    {
+        return Checklists.CreateChecklistJsonAsync(
+            taskId,
+            checklistJson,
+            customTaskIds,
+            teamId,
+            cancellationToken);
+    }
+
+    public string UpdateChecklistJson(string checklistId, string checklistJson)
+    {
+        return Checklists.UpdateChecklistJson(checklistId, checklistJson);
+    }
+
+    public Task<string> UpdateChecklistJsonAsync(
+        string checklistId,
+        string checklistJson,
+        CancellationToken cancellationToken = default)
+    {
+        return Checklists.UpdateChecklistJsonAsync(checklistId, checklistJson, cancellationToken);
+    }
+
+    public string DeleteChecklistJson(string checklistId)
+    {
+        return Checklists.DeleteChecklistJson(checklistId);
+    }
+
+    public Task<string> DeleteChecklistJsonAsync(
+        string checklistId,
+        CancellationToken cancellationToken = default)
+    {
+        return Checklists.DeleteChecklistJsonAsync(checklistId, cancellationToken);
+    }
+
+    public string CreateChecklistItemJson(string checklistId, string checklistItemJson)
+    {
+        return Checklists.CreateChecklistItemJson(checklistId, checklistItemJson);
+    }
+
+    public Task<string> CreateChecklistItemJsonAsync(
+        string checklistId,
+        string checklistItemJson,
+        CancellationToken cancellationToken = default)
+    {
+        return Checklists.CreateChecklistItemJsonAsync(
+            checklistId,
+            checklistItemJson,
+            cancellationToken);
+    }
+
+    public string UpdateChecklistItemJson(
+        string checklistId,
+        string checklistItemId,
+        string checklistItemJson)
+    {
+        return Checklists.UpdateChecklistItemJson(checklistId, checklistItemId, checklistItemJson);
+    }
+
+    public Task<string> UpdateChecklistItemJsonAsync(
+        string checklistId,
+        string checklistItemId,
+        string checklistItemJson,
+        CancellationToken cancellationToken = default)
+    {
+        return Checklists.UpdateChecklistItemJsonAsync(
+            checklistId,
+            checklistItemId,
+            checklistItemJson,
+            cancellationToken);
+    }
+
+    public string DeleteChecklistItemJson(string checklistId, string checklistItemId)
+    {
+        return Checklists.DeleteChecklistItemJson(checklistId, checklistItemId);
+    }
+
+    public Task<string> DeleteChecklistItemJsonAsync(
+        string checklistId,
+        string checklistItemId,
+        CancellationToken cancellationToken = default)
+    {
+        return Checklists.DeleteChecklistItemJsonAsync(
+            checklistId,
+            checklistItemId,
+            cancellationToken);
     }
 
     public string AddTaskCommentJson(string taskId, string commentText, bool notifyAll = false)

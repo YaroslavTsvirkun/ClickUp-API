@@ -245,6 +245,137 @@ public sealed class ClickUpTasksClient : ClickUpEndpointClient
             cancellationToken);
     }
 
+    public string AddTaskDependencyJson(
+        string taskId,
+        string? dependsOnTaskId = null,
+        string? dependencyOfTaskId = null,
+        bool customTaskIds = false,
+        string? teamId = null)
+    {
+        return AddTaskDependencyJsonAsync(
+                taskId,
+                dependsOnTaskId,
+                dependencyOfTaskId,
+                customTaskIds,
+                teamId)
+            .GetAwaiter()
+            .GetResult();
+    }
+
+    public Task<string> AddTaskDependencyJsonAsync(
+        string taskId,
+        string? dependsOnTaskId = null,
+        string? dependencyOfTaskId = null,
+        bool customTaskIds = false,
+        string? teamId = null,
+        CancellationToken cancellationToken = default)
+    {
+        var dependencyRequest = CreateDependencyRequest(dependsOnTaskId, dependencyOfTaskId);
+        var customTaskIdsValue = GetCustomTaskIdsValue(customTaskIds, teamId);
+        return SendAsync(
+            ct => _api.AddTaskDependencyAsync(
+                taskId,
+                customTaskIdsValue,
+                teamId,
+                dependencyRequest,
+                ct),
+            "POST",
+            $"task/{taskId}/dependency",
+            cancellationToken);
+    }
+
+    public string DeleteTaskDependencyJson(
+        string taskId,
+        string? dependsOnTaskId = null,
+        string? dependencyOfTaskId = null,
+        bool customTaskIds = false,
+        string? teamId = null)
+    {
+        return DeleteTaskDependencyJsonAsync(
+                taskId,
+                dependsOnTaskId,
+                dependencyOfTaskId,
+                customTaskIds,
+                teamId)
+            .GetAwaiter()
+            .GetResult();
+    }
+
+    public Task<string> DeleteTaskDependencyJsonAsync(
+        string taskId,
+        string? dependsOnTaskId = null,
+        string? dependencyOfTaskId = null,
+        bool customTaskIds = false,
+        string? teamId = null,
+        CancellationToken cancellationToken = default)
+    {
+        var (dependsOn, dependencyOf) = GetDependencyTarget(dependsOnTaskId, dependencyOfTaskId);
+        var customTaskIdsValue = GetCustomTaskIdsValue(customTaskIds, teamId);
+        return SendAsync(
+            ct => _api.DeleteTaskDependencyAsync(
+                taskId,
+                dependsOn,
+                dependencyOf,
+                customTaskIdsValue,
+                teamId,
+                ct),
+            "DELETE",
+            $"task/{taskId}/dependency",
+            cancellationToken);
+    }
+
+    public string AddTaskLinkJson(
+        string taskId,
+        string linksToTaskId,
+        bool customTaskIds = false,
+        string? teamId = null)
+    {
+        return AddTaskLinkJsonAsync(taskId, linksToTaskId, customTaskIds, teamId)
+            .GetAwaiter()
+            .GetResult();
+    }
+
+    public Task<string> AddTaskLinkJsonAsync(
+        string taskId,
+        string linksToTaskId,
+        bool customTaskIds = false,
+        string? teamId = null,
+        CancellationToken cancellationToken = default)
+    {
+        var customTaskIdsValue = GetCustomTaskIdsValue(customTaskIds, teamId);
+        return SendAsync(
+            ct => _api.AddTaskLinkAsync(taskId, linksToTaskId, customTaskIdsValue, teamId, ct),
+            "POST",
+            $"task/{taskId}/link/{linksToTaskId}",
+            cancellationToken);
+    }
+
+    public string DeleteTaskLinkJson(
+        string taskId,
+        string linksToTaskId,
+        bool customTaskIds = false,
+        string? teamId = null)
+    {
+        return DeleteTaskLinkJsonAsync(taskId, linksToTaskId, customTaskIds, teamId)
+            .GetAwaiter()
+            .GetResult();
+    }
+
+    public Task<string> DeleteTaskLinkJsonAsync(
+        string taskId,
+        string linksToTaskId,
+        bool customTaskIds = false,
+        string? teamId = null,
+        CancellationToken cancellationToken = default)
+    {
+        var customTaskIdsValue = GetCustomTaskIdsValue(customTaskIds, teamId);
+        return SendAsync(
+            ct => _api.DeleteTaskLinkAsync(taskId, linksToTaskId, customTaskIdsValue, teamId, ct),
+            "DELETE",
+            $"task/{taskId}/link/{linksToTaskId}",
+            cancellationToken);
+    }
+
     public string MergeTasksJson(string taskId, string[] sourceTaskIds)
     {
         return MergeTasksJsonAsync(taskId, sourceTaskIds).GetAwaiter().GetResult();
@@ -335,6 +466,32 @@ public sealed class ClickUpTasksClient : ClickUpEndpointClient
             "PUT",
             $"task/{taskId}",
             cancellationToken);
+    }
+
+    private static JsonElement CreateDependencyRequest(string? dependsOnTaskId, string? dependencyOfTaskId)
+    {
+        var (dependsOn, dependencyOf) = GetDependencyTarget(dependsOnTaskId, dependencyOfTaskId);
+        return ToJsonElement(new
+        {
+            depends_on = dependsOn,
+            dependency_of = dependencyOf,
+        });
+    }
+
+    private static (string? DependsOn, string? DependencyOf) GetDependencyTarget(
+        string? dependsOnTaskId,
+        string? dependencyOfTaskId)
+    {
+        var hasDependsOn = !string.IsNullOrWhiteSpace(dependsOnTaskId);
+        var hasDependencyOf = !string.IsNullOrWhiteSpace(dependencyOfTaskId);
+
+        if (hasDependsOn == hasDependencyOf)
+        {
+            throw new ArgumentException(
+                "Exactly one of dependsOnTaskId or dependencyOfTaskId must be provided.");
+        }
+
+        return (hasDependsOn ? dependsOnTaskId : null, hasDependencyOf ? dependencyOfTaskId : null);
     }
 
     private static string? GetCustomTaskIdsValue(bool customTaskIds, string? teamId)
